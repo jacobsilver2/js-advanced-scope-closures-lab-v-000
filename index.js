@@ -1,7 +1,7 @@
 function produceDrivingRange(blockRange) {
   return function (start, end) {
     
-    const distance = end - start;
+    const distance = Math.abs(end - start);
     const diff = blockRange - distance;
     
     if (diff > 0 ) {

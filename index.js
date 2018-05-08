@@ -1,6 +1,8 @@
 function produceDrivingRange(blockRange) {
-  return function (start, end) {
+  return function (startBlock, endBlock) {
     
+    let start = parseInt(startBlock);
+    let end = parseInt(endBlock);
     const distance = Math.abs(end - start);
     const diff = blockRange - distance;
     
@@ -11,3 +13,10 @@ function produceDrivingRange(blockRange) {
     }
   }
 }
+
+function produceTipCalculator(percentage) {
+  return function(subTotal) {
+    return percentage * subTotal
+  }
+}
+
